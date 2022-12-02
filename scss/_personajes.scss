@@ -1,0 +1,69 @@
+.container3 {
+	position: relative;
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.card3 {
+		&:hover {
+			.img4 {
+				left: 50%;
+				height: 500px;
+			}
+			.content3 {
+				left: 0;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		.content3 {
+			position: relative;
+			width: 500px;
+			left: 60%;
+			padding: 20px 20px 20px 10px;
+			opacity: 0;
+			visibility: hidden;
+			transition: 0.5s;
+			h2 {
+				color: $color_3;
+				text-transform: uppercase;
+				font-size: 2.2em;
+				line-height: 1em;
+			}
+			a {
+				color: $color_4;
+				background: #fff;
+				display: inline-block;
+				padding: 10px 20px;
+				margin-top: 10px;
+				text-decoration: none;
+				font-weight: 700;
+			}
+		}
+		.per {
+			width: 200px;
+			color: $color_3;
+		}
+	}
+}
+.card3 {
+	@include medidas(500px, 400px);
+	@include flex;
+	margin: 50px;
+	transition: 0.5s;
+	background: linear-gradient(45deg, #202020a2, #302b2b);
+}
+.img4 {
+	position: relative;
+	@include flex;
+	bottom: 0;
+	left: 20%;
+	transform: translateX(-50%);
+	height: 500px;
+	transition: 0.5s;
+	flex-direction: row;
+}

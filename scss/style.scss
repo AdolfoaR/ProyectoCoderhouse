@@ -1,0 +1,239 @@
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+@import "temporadas";
+@import "historia";
+@import "personajes";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	@include medidas(100%, 100%);
+	background-image: url(../Imagenes/fondo1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.fondo5 {
+	background-image: url(../Imagenes/fondo5.jpg);
+}
+.fondo4 {
+	background-image: url(../Imagenes/fondo4.jpg);
+}
+.fondo3 {
+	background-image: url(../Imagenes/fondo3.jpg);
+}
+.fondo2 {
+	background-image: url(../Imagenes/fondo2.jpg);
+}
+.nav-bar {
+	width: 100%;
+	background-color: $background-color_1;
+	display: flex;
+	z-index: 9999;
+	justify-content: space-between;
+	list-style: none;
+	position: relative;
+	padding: 20px 60px;
+}
+.logo {
+	@include medidas(200px, 55px);
+	
+}
+.imagen {
+	@include medidas(200px, 55px);
+}
+.menu {
+	display: flex;
+	li {
+		padding-left: 30px;
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: $color_1;
+			text-align: center;
+			transition: 0.15s ease;
+			position: relative;
+			text-transform: uppercase;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -1;
+				left: 0;
+				width: 0;
+				height: 2px;
+				transition: 0.15s ease;
+				background-color: $background-color_2;
+			}
+			&:hover {
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+	li.active {
+		a {
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+.open-menu {
+	@extend %estiloMenu2;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+}
+.close-menu {
+	@extend %estiloMenu2;
+	top: 20px;
+	right: 20px;
+}
+#check {
+	display: none;
+}
+.bien {
+	position: absolute;
+	top: 10%;
+	color: $color_1;
+}
+main {
+	@include flex;
+}
+.container1 {
+	width: auto;
+	display: flex;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.card1 {
+	@include medidas(auto, 600px);
+	margin: 50px;
+	margin-top: 200px;
+	overflow: hidden;
+	&:hover {
+		cursor: pointer;
+		.intro {
+			height: 320px;
+			bottom: 310px;
+			background: black;
+		}
+		.p1 {
+			opacity: 1;
+			visibility: visible;
+		}
+		.imag2 {
+			transform: scale(1.2);
+		}
+	}
+}
+.imag2 {
+	@include medidas(350px, 600px);
+	border-radius: 3px;
+}
+.intro {
+	@include medidas(350px, 120px);
+	padding: 6px;
+	box-sizing: border-box;
+	position: relative;
+	bottom: 110px;
+	background: rgb(27, 27, 0.5);
+	color: $color_1;
+	transition: 0.5s;
+}
+h1 {
+	margin: 10px;
+	font-size: 40px;
+	text-align: center;
+}
+.p1 {
+	font-size: 20px;
+	margin: 20px;
+	visibility: hidden;
+	opacity: 0;
+}
+
+@media (max-width: 610px) {
+	.menu {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@include medidas(80%, 100vh);
+		position: fixed;
+		top: 0;
+		right: -100%;
+		z-index: 100;
+		background-color: $background-color_1;
+		transition: all 0.2 ease-in-out;
+		li {
+			margin-top: 40px;
+			a {
+				padding: 10px;
+			}
+		}
+	}
+	.open-menu {
+		display: block;
+	}
+	.close-menu {
+		display: block;
+	}
+	#check {
+		&:checked {
+			~ {
+				.menu {
+					right: 0;
+				}
+			}
+		}
+	}
+	.container1 {
+		flex-direction: column;
+	}
+	.intro {
+		width: auto;
+		position: relative;
+	}
+	.grid {
+		margin: 30px;
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.grid-cards {
+		@include medidas(auto, 800px);
+		@include flex;
+		display: block;
+	}
+	.img5 {
+		@include medidas(100%, 40%);
+	}
+	.tempo {
+		display: block;
+		@include medidas(auto, 50%);
+	}
+	.container3 {
+		@include medidas(80%, auto);
+		position: relative;
+		display: flex;
+		.card3 {
+			&:hover {
+				.img4 {
+					left: 50%;
+					height: 500px;
+				}
+				.content3 {
+					left: 15%;
+				}
+			}
+		}
+	}
+	.card3 {
+		@include medidas(400px, 400px);
+		
+	}
+}

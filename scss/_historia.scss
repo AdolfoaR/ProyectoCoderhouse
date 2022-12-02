@@ -1,0 +1,81 @@
+
+
+.historia {
+	@include medidas(100%, 100vh);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	bottom: 50px;
+	text-align: center;
+	.main1 {
+		.img3 {
+			width: 600px;
+			max-width: 95%;
+			height: 600px;
+			max-height: 70%;
+			padding: 0 10px;
+			margin: 20px;
+			animation-name: animacion;
+			animation-iteration-count: infinite;
+			animation-duration: 5s;
+			animation-direction: alternate-reverse;
+		}
+	}
+}
+@keyframes animacion {
+	to {
+		transform: scale(1);
+	}
+	from {
+		transform: scale(1.1);
+	}
+}
+
+.texto {
+	width: 600px;
+	max-width: 100%;
+	padding: 0 10px;
+	background-color: $background-color_3;
+	h3 {
+		font-size: 64px;
+		color: $color_1;
+		letter-spacing: 1px;
+		font-weight: 400;
+		margin-bottom: 10px;
+	}
+	.p2 {
+		font-size: 27px;
+		color: $color_1;
+		line-height: 30px;
+		margin-bottom: 40px;
+	}
+}
+.main1 {
+	width: 1290px;
+	max-width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+.boton {
+	button {
+		background: white;
+		padding: 20px 32px;
+		font-size: 20px;
+		font-weight: bold;
+		color: $color_2;
+		border: none;
+		outline: none;
+		box-shadow: 0px 16px 32px 0px RGB(0, 0, 0, 0.6);
+		margin-right: 20px;
+		&:hover {
+			background-color: $background-color_4;
+			color: $color_1;
+			transition: 0.3s;
+			cursor: pointer;
+		}
+	}
+}
