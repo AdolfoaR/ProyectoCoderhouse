@@ -372,7 +372,7 @@ h1 {
     width: auto;
     height: 50%; }
   .container3 {
-    width: 80%;
+    width: 90%;
     height: auto;
     position: relative;
     display: flex; }
@@ -380,9 +380,9 @@ h1 {
       left: 60%;
       height: 500px; }
     .container3 .card3:hover .content3 {
-      left: 25%; }
+      left: 28%; }
   .card3 {
-    width: 400px;
+    width: 420px;
     height: 400px; }
   .historia {
     display: flex;
