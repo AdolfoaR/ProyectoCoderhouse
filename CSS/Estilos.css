@@ -42,17 +42,18 @@
 
 .historia {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 50px;
+  margin-bottom: 10%;
+  margin-top: 10%;
   text-align: center; }
   .historia .main1 .img3 {
     width: 600px;
-    max-width: 95%;
     height: 600px;
+    max-width: 95%;
     max-height: 70%;
     padding: 0 10px;
     margin: 20px;
@@ -82,7 +83,8 @@
     font-size: 27px;
     color: white;
     line-height: 30px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    text-align: justify; }
 
 .main1 {
   width: 1290px;
@@ -110,7 +112,6 @@
     cursor: pointer; }
 
 .container3 {
-  position: relative;
   width: 100%;
   height: auto;
   position: relative;
@@ -266,15 +267,19 @@ main {
 
 .container1 {
   width: auto;
-  display: flex;
   display: inline-flex;
-  flex-wrap: wrap; }
+  margin: auto;
+  margin: 2rem; }
 
 .card1 {
-  width: auto;
+  width: 22rem;
   height: 600px;
-  margin: 50px;
-  margin-top: 200px;
+  display: flex;
+  display: block;
+  justify-items: center;
+  justify-content: space-between;
+  margin-top: 12rem;
+  margin-bottom: 12rem;
   overflow: hidden; }
   .card1:hover {
     cursor: pointer; }
@@ -289,12 +294,12 @@ main {
       transform: scale(1.2); }
 
 .imag2 {
-  width: 350px;
+  width: 22rem;
   height: 600px;
   border-radius: 3px; }
 
 .intro {
-  width: 350px;
+  width: 22rem;
   height: 120px;
   padding: 6px;
   box-sizing: border-box;
@@ -338,11 +343,16 @@ h1 {
     display: block; }
   #check:checked ~ .menu {
     right: 0; }
+  .bien {
+    margin-top: 60px; }
   .container1 {
-    flex-direction: column; }
-  .intro {
     width: auto;
-    position: relative; }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .intro {
+    position: relative;
+    justify-content: center; }
   .grid {
     margin: 30px;
     display: grid;
@@ -356,7 +366,7 @@ h1 {
     display: block; }
   .img5 {
     width: 100%;
-    height: 40%; }
+    height: 50%; }
   .tempo {
     display: block;
     width: auto;
@@ -367,10 +377,25 @@ h1 {
     position: relative;
     display: flex; }
     .container3 .card3:hover .img4 {
-      left: 50%;
+      left: 60%;
       height: 500px; }
     .container3 .card3:hover .content3 {
-      left: 15%; }
+      left: 25%; }
   .card3 {
     width: 400px;
-    height: 400px; } }
+    height: 400px; }
+  .historia {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin: 30px; }
+  .main1 {
+    margin-top: 50px;
+    width: auto;
+    height: 100%; }
+  .img3 {
+    height: 200px; }
+  .texto .p2 {
+    height: auto;
+    font-size: 25px;
+    text-align: left; } }

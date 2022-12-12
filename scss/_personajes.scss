@@ -1,7 +1,7 @@
+//estilos pagina personajes
+
 .container3 {
-	position: relative;
-	width: 100%;
-	height: auto;
+	@include medidas(100%, auto);
 	position: relative;
 	display: flex;
 	justify-content: space-around;

@@ -5,6 +5,7 @@
 @import "historia";
 @import "personajes";
 
+// Estilos pagina principal
 * {
 	padding: 0;
 	margin: 0;
@@ -29,6 +30,8 @@ body {
 .fondo2 {
 	background-image: url(../Imagenes/fondo2.jpg);
 }
+
+// menu de navegacion
 .nav-bar {
 	width: 100%;
 	background-color: $background-color_1;
@@ -63,8 +66,7 @@ body {
 				position: absolute;
 				bottom: -1;
 				left: 0;
-				width: 0;
-				height: 2px;
+				@include medidas(0, 2px);
 				transition: 0.15s ease;
 				background-color: $background-color_2;
 			}
@@ -102,19 +104,30 @@ body {
 	top: 10%;
 	color: $color_1;
 }
+// estilos portada principal
 main {
 	@include flex;
 }
 .container1 {
+	
 	width: auto;
-	display: flex;
 	display: inline-flex;
-	flex-wrap: wrap;
+	margin: auto;
+	margin: 2rem;
+
+	
+	
+	
+	
 }
 .card1 {
-	@include medidas(auto, 600px);
-	margin: 50px;
-	margin-top: 200px;
+	@include medidas(22rem, 600px);
+	display: flex;
+	display: block;
+	justify-items: center;
+	justify-content: space-between;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
 	overflow: hidden;
 	&:hover {
 		cursor: pointer;
@@ -133,11 +146,12 @@ main {
 	}
 }
 .imag2 {
-	@include medidas(350px, 600px);
+	@include medidas(22rem, 600px);
 	border-radius: 3px;
+	
 }
 .intro {
-	@include medidas(350px, 120px);
+	@include medidas(22rem, 120px);
 	padding: 6px;
 	box-sizing: border-box;
 	position: relative;
@@ -157,8 +171,10 @@ h1 {
 	visibility: hidden;
 	opacity: 0;
 }
-
-@media (max-width: 610px) {
+//media queries
+@media (max-width: 610px)
+//media queries menu
+{
 	.menu {
 		flex-direction: column;
 		align-items: center;
@@ -192,13 +208,22 @@ h1 {
 			}
 		}
 	}
+	//media queries pagina principal
+	.bien{
+		margin-top: 60px;
+	}
 	.container1 {
-		flex-direction: column;
+		width: auto;
+		@include flex;
+		
+		
 	}
 	.intro {
-		width: auto;
+		
 		position: relative;
+		justify-content: center;
 	}
+	//media queries pagina temporadas
 	.grid {
 		margin: 30px;
 		display: grid;
@@ -210,12 +235,14 @@ h1 {
 		display: block;
 	}
 	.img5 {
-		@include medidas(100%, 40%);
+		@include medidas(100%, 50%);
 	}
 	.tempo {
 		display: block;
 		@include medidas(auto, 50%);
 	}
+
+	//pagina personajes
 	.container3 {
 		@include medidas(80%, auto);
 		position: relative;
@@ -223,11 +250,11 @@ h1 {
 		.card3 {
 			&:hover {
 				.img4 {
-					left: 50%;
+					left: 60%;
 					height: 500px;
 				}
 				.content3 {
-					left: 15%;
+					left: 25%;
 				}
 			}
 		}
@@ -236,4 +263,25 @@ h1 {
 		@include medidas(400px, 400px);
 		
 	}
+	//media queries pagigna historia
+
+	.historia {
+		display: flex;
+		@include medidas(80%, 100%);
+		margin: 30px;
+	}
+	.main1  {
+		margin-top: 50px;
+		@include medidas(auto, 100%);
+		
+}
+.img3{
+	height: 200px;
+}
+.texto .p2{
+	height: auto;
+	font-size: 25px;
+	text-align: left;
+}
+
 }
